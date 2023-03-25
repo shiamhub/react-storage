@@ -3,6 +3,7 @@ import { totalPrice } from '../../utilities/calculate';
 import Cosmetic from '../Cosmetic/Cosmetic';
 // import { add, mulitiply } from '../../utilities/calculate';
 // import add from '../../utilities/calculate';
+import './Cosmetics.css'
 
 const Cosmetics = () => {
     // const a = 5;
@@ -29,9 +30,11 @@ const Cosmetics = () => {
             <p>Total: {total}</p>
             {/* <p>total {total}</p>
             <p>re {mul}</p> */}
+            <div className='container'>
             {
                 cosmetics.map(cosmetic => <Cosmetic key={cosmetic.id} cosmetic={cosmetic}></Cosmetic>)
             }
+            </div>
         </div>
     );
 };
